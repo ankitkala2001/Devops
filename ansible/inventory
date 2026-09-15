@@ -1,0 +1,9 @@
+[master]
+ci-master ansible_host=<MASTER_PUBLIC_IP>
+
+[agent]
+ci-agent ansible_host=<AGENT_PUBLIC_IP>
+
+[all:vars]
+ansible_user=ubuntu
+ansible_ssh_private_key_file=~/.ssh/id_rsa

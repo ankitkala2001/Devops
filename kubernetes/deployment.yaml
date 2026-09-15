@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+  name: prt-deployment
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: prt
+
+  template:
+
+    metadata:
+      labels:
+        app: prt
+
+    spec:
+
+      containers:
+
+      - name: prt
+
+        image: prt-image
+
+        imagePullPolicy: Never
+
+        ports:
+
+        - containerPort: 80
+________________________________________
